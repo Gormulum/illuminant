@@ -6,13 +6,10 @@ using UnityEngine.Accessibility;
 
 public class PlayerLocomotion : MonoBehaviour
 {
-    Rigidbody rb;
+    CharacterController characterController;
 
     
     PlayerInput playerInput;
-
-    [SerializeField] Transform camera;
-    public float cameraHeight = 1;
     Vector2 mousePosition = Vector2.zero;   
     Vector2 cameraRotation = Vector2.zero;
 
@@ -21,25 +18,21 @@ public class PlayerLocomotion : MonoBehaviour
     Vector2 wasdDirection = Vector2.zero;
     Vector3 moveDirection = Vector3.zero;
 
-    public float jumpForce = 100;
+    public float jumpHeight = 10;
 
     public float mouseSensitivity = 1;
-    public float moveForce = 100;
-    public float maxSpeed = 10;
-
-    public float airDrag = 0.1f;
-    public float linearDrag = 10f;
-    bool isGrounded = false;
-    bool groundedTimerFinished = true;
+    public float moveSpeed = 10;
+    public float gravity = -35f;
 
     public GameObject groundDetection;
     public LayerMask groundLayer;
 
     Camera mainCamera;
+    Vector3 velocity;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         mainCamera = Camera.main;
     }
@@ -62,23 +55,25 @@ public class PlayerLocomotion : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
+
+        if (characterController.isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f; // Small negative to keep grounded
+        }
+
         if (context.performed)
         {
-            if(groundedTimerFinished == true && isGrounded == true)
-            {
-                
-                rb.AddForce(0, jumpForce, 0, ForceMode.VelocityChange);
-                Invoke("GroundedTimer", 1f);
-                groundedTimerFinished = false;
-            }
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+
+
         }
+        
+        velocity.y += gravity * Time.deltaTime;
+
+        
         
     }
 
-    void GroundedTimer()
-    {
-        groundedTimerFinished = true;
-    }
 
     public void MouseLook(InputAction.CallbackContext context)
     {
@@ -89,7 +84,6 @@ public class PlayerLocomotion : MonoBehaviour
     void Update()
     {
         RotatePlayerTowardsCamera();
-        GroundDetection();
         Locomotion();
     }
 
@@ -107,40 +101,15 @@ public class PlayerLocomotion : MonoBehaviour
             }
         }
     }
-    void GroundDetection()
-    {
-
-        if (Physics.Raycast(groundDetection.transform.position, Vector3.down, 0.3f, groundLayer.value))
-        {
-            isGrounded = true;
-        }
-        else
-        {
-            isGrounded = false;
-        }
-        
-    }
+    
 
 
     private void Locomotion()
     {
         moveDirection = transform.right * wasdDirection.x + transform.forward * wasdDirection.y;
 
-        if (isGrounded)
-        {
-            
-            rb.AddForce(new Vector3(moveDirection.x * moveForce * Time.deltaTime, 0, moveDirection.z * moveForce * Time.deltaTime), ForceMode.Acceleration);
-            rb.linearDamping = linearDrag;
-            rb.maxLinearVelocity = maxSpeed;
-        }
-        else
-        {
-            rb.maxLinearVelocity = 9999999;
-            rb.AddForce(new Vector3(moveDirection.x * (moveForce / airDrag) * Time.deltaTime, 0, moveDirection.z * (moveForce / airDrag) * Time.deltaTime), ForceMode.Acceleration);
-            
+        characterController.Move(((moveDirection * moveSpeed) + velocity) * Time.deltaTime);
 
-            
-            rb.linearDamping = 0;
-        }
+        
     }
 }
