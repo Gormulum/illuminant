@@ -1,77 +1,42 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.LowLevel;
-using UnityEngine.Accessibility;
 
 public class PlayerLocomotion : MonoBehaviour
 {
+
+    [Header("Movement")]
+    public float moveSpeed = 5f;
+    public float jumpHeight = 1.5f;
+    public float gravity = -9.81f;
+
+    [Header("Look")]
+    public float mouseSensitivity = 100f;
+    public Transform cameraTransform;
+
     CharacterController characterController;
-
-    
-    PlayerInput playerInput;
-    Vector2 mousePosition = Vector2.zero;   
-    Vector2 cameraRotation = Vector2.zero;
-
-    InputAction jump;
-
-    Vector2 wasdDirection = Vector2.zero;
-    Vector3 moveDirection = Vector3.zero;
-
-    public float jumpHeight = 10;
-
-    public float mouseSensitivity = 1;
-    public float moveSpeed = 10;
-    public float gravity = -35f;
-
-    public GameObject groundDetection;
-    public LayerMask groundLayer;
-
-    Camera mainCamera;
+    Vector2 mousePosition;
+    Vector2 wasdDirection;
     Vector3 velocity;
+    float xRotation = 0f;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
-        mainCamera = Camera.main;
-    }
-
-    private void OnEnable()
-    {
-        //playerInput.Enable();
-    }
-
-    private void OnDisable()
-    {
-        //playerInput.Disable();
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
         wasdDirection = context.ReadValue<Vector2>();
-        
     }
 
     public void OnJump(InputAction.CallbackContext context)
     {
-
-        if (characterController.isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f; // Small negative to keep grounded
-        }
-
-        if (context.performed)
+        if (context.performed && characterController.isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-
-
         }
-        
-        velocity.y += gravity * Time.deltaTime;
-
-        
-        
+            
     }
 
 
@@ -89,27 +54,26 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void RotatePlayerTowardsCamera()
     {
-        if (mainCamera != null)
-        {
-            Vector3 cameraForward = mainCamera.transform.forward;
-            cameraForward.y = 0f; // Ignore the y-axis rotation
+        xRotation -= mousePosition.y * mouseSensitivity * Time.fixedDeltaTime;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-            if (cameraForward != Vector3.zero)
-            {
-                Quaternion newRotation = Quaternion.LookRotation(cameraForward);
-                transform.rotation = newRotation;
-            }
-        }
+        transform.Rotate(Vector3.up * mousePosition.x * mouseSensitivity * Time.fixedDeltaTime) ;
     }
     
 
 
     private void Locomotion()
     {
-        moveDirection = transform.right * wasdDirection.x + transform.forward * wasdDirection.y;
+        if (characterController.isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
 
-        characterController.Move(((moveDirection * moveSpeed) + velocity) * Time.deltaTime);
+        Vector3 move = transform.right * wasdDirection.x + transform.forward * wasdDirection.y;
+        characterController.Move(move * moveSpeed * Time.deltaTime);
 
-        
+        velocity.y += gravity * Time.deltaTime;
+        characterController.Move(velocity * Time.deltaTime);
     }
 }
