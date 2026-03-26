@@ -63,7 +63,7 @@ Material:
     - _Cutoff: 0
     - _CutoffSpeed: -0.4
     - _Displacement_Amount: 0.2
-    - _Displacement_Scale: 0.3
+    - _Displacement_Scale: 1
     - _Displacement_Speed: 0.2
     - _DstBlend: 10
     - _Edge_Offset: 20
@@ -72,18 +72,18 @@ Material:
     - _MaxCutoff: 0
     - _MaxDist: 250
     - _MaxWaveDist: 250
-    - _NormalStrength: 0.1
+    - _NormalStrength: 0.3
     - _Normal_Strength: 0.1
     - _Offset: 0.9
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ScreenSpaceReflections: 1
+    - _ScreenSpaceReflections: 0
     - _Speed: 0.02
     - _SrcBlend: 5
     - _Surface: 1
-    - _Tiling: 0.2
-    - _Transparency: 1
+    - _Tiling: 0.05
+    - _Transparency: 0.454
     - _UseFoam: 1
     - _Use_Foam: 1
     - _WaveDist: 10
@@ -95,8 +95,8 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 1
     m_Colors:
-    - _Color: {r: 0.23529412, g: 0.43302175, b: 0.47843137, a: 1}
-    - _EdgeColor: {r: 0.2509804, g: 0.32941177, b: 0.27077788, a: 1}
+    - _Color: {r: 0.73899364, g: 0.9316656, b: 1, a: 1}
+    - _EdgeColor: {r: 0.2509804, g: 0.30624676, b: 0.32941177, a: 1}
     - _Edge_Color: {r: 0.2507565, g: 0.3301887, b: 0.28799033, a: 1}
     - _FoamColor: {r: 4, g: 4, b: 4, a: 1}
     - _Foam_Color: {r: 1, g: 1, b: 1, a: 1}
