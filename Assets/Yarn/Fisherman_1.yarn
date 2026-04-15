@@ -1,0 +1,25 @@
+﻿title: Fisherman_1
+position: 12,-10
+---
+Fisherman:"Hello there keeper, isn't that a nice day. Could you give me a hand?
+Fisherman: I've ran out of fishing line, would you happen to have any.
+-> Yeah I think I have some at my home, I'll be two minutes.
+    <<jump  PositiveResponse>>
+-> No.
+    <<jump NegativeResponse>>
+===
+
+
+title: PositiveResponse
+position: 212,171
+---
+Fisherman: Oh! Happy me! That's perfect, thank you very much.
+===
+
+
+title: NegativeResponse
+position: -172,176
+---
+Fisherman: Oh...
+Fisherman: That's ok then. I'll just go on my merry way then.
+===
