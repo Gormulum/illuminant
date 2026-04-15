@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "e8a68b78448dc34f",
+    "type": "split",
+    "children": [
+      {
+        "id": "d88069ce65086017",
+        "type": "tabs",
+        "dimension": 70.30685920577618,
+        "children": [
+          {
+            "id": "f492d60d420b3a85",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Illuminant Story.canvas",
+                "viewState": {
+                  "x": 183.01088067534965,
+                  "y": 1255.3077723839995,
+                  "zoom": -0.3820150023914303
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Illuminant Story"
+            }
+          }
+        ]
+      },
+      {
+        "id": "1e6bc261e581bdb5",
+        "type": "tabs",
+        "dimension": 29.693140794223826,
+        "children": [
+          {
+            "id": "37862c52afc4442c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cae658ac513a1c02",
+    "type": "split",
+    "children": [
+      {
+        "id": "975a646608739c28",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "482474344a896f53",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "011f1ce5f491cde4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "0c9c12f92a4bddbb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f9f84b91da25541f",
+    "type": "split",
+    "children": [
+      {
+        "id": "592d350c1ce767fd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "561ddc018bb342b9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Illuminant Story.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Illuminant Story"
+            }
+          },
+          {
+            "id": "1068eb6a13ceb5aa",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Illuminant Story.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Illuminant Story"
+            }
+          },
+          {
+            "id": "147c6516492ccd34",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0b46833e5924dd06",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Illuminant Story.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Illuminant Story"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "f492d60d420b3a85",
+  "lastOpenFiles": [
+    "Illuminant Hierarchy.canvas",
+    "Illuminant Story.canvas",
+    "Welcome.md"
+  ]
+}

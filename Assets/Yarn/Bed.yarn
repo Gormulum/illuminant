@@ -1,0 +1,8 @@
+﻿title: Bed
+---
+Go to bed?
+-> Yes
+    <<set $day to $day + 1>>
+    <<set $gone_to_bed to true>>
+-> No
+===
