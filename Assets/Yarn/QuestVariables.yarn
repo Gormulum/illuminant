@@ -1,0 +1,26 @@
+﻿title: QuestVariables
+---
+//corruption
+<<declare $corruption_level = 0 >>
+
+//day count
+<<declare $day = 0 >>
+<<declare $gone_to_bed = false as bool>>
+
+//quest 1
+<<declare $quest1_active = false as bool>>
+<<declare $quest1_denied = false as bool>>
+<<declare $quest1_completed = false as bool>>
+<<declare $quest1_end = false as bool>>
+
+//quest 2
+<<declare $quest2_active = false as bool>>
+<<declare $quest2_denied = false as bool>>
+<<declare $quest2_completed = false as bool>>
+<<declare $quest2_end = false as bool>>
+
+
+//quest 3
+<<declare $quest3_active = false as bool>>
+<<declare $quest3_completed = false as bool>>
+===

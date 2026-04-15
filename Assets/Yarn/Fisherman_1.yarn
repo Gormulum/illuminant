@@ -1,25 +1,28 @@
 ﻿title: Fisherman_1
 position: 12,-10
 ---
-Fisherman:"Hello there keeper, isn't that a nice day. Could you give me a hand?
-Fisherman: I've ran out of fishing line, would you happen to have any.
+
+<<if $quest1_active is false and $quest1_end is false>>
+    Fisherman: Hello there keeper, isn't that a nice day. Could you give me a hand?
+    Fisherman: I've ran out of fishing line, would you happen to have any.
 -> Yeah I think I have some at my home, I'll be two minutes.
-    <<jump  PositiveResponse>>
+    <<set $quest1_active to true>>
 -> No.
-    <<jump NegativeResponse>>
+    <<set $quest1_active to true>>
+    <<set $quest1_denied to true>>
+    
+<<elseif $quest1_denied is false and $quest1_completed is false and $quest1_end is false>>
+    Fisherman: Just waiting on the fishing line.
+<<elseif $quest1_denied is false and $quest1_completed is true and $quest1_end is false>>
+    Fisherman: Oh! Happy me! That's perfect, thank you very much.
+    <<set $quest1_end to true>>
+<<elseif $quest1_denied is true and $quest1_end is false>>
+    Fisherman: Oh...
+    Fisherman: That's ok then. I'll just go on my merry way then.
+    <<set $corruption_level to $corruption_level + 1>>
+    <<set $quest1_end to true>>
+<<endif>>
 ===
 
 
-title: PositiveResponse
-position: 212,171
----
-Fisherman: Oh! Happy me! That's perfect, thank you very much.
-===
 
-
-title: NegativeResponse
-position: -172,176
----
-Fisherman: Oh...
-Fisherman: That's ok then. I'll just go on my merry way then.
-===
