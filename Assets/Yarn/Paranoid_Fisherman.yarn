@@ -1,0 +1,61 @@
+﻿title: Paranoid_Fisherman
+---
+<<if $fisherman_quest3_end is false>>
+    <<if $fisherman_quest3_completed is false>>
+        <<if $fisherman_quest3_active is false>>
+            Fisherman: What's going on! What's going on!
+            Fisherman: Help meeeee...
+            Fisherman: Who are you?
+            Fisherman: How did you get here?
+        -> I live here?.
+            Fisherman: Why should I believe you?
+            -> Because I'm the lighthouse operator. I operate it every night.
+                Fisherman: Phew...
+                Fisherman: At least I can trust you.
+                Fisherman: I've been going mad.
+                Fisherman: Everyone is coming down with this disease.
+                Fisherman: The locals call it "The Corruption".
+                Fisher: DO YOU HAVE IT!?
+                -> No, of course not.
+                    <<if $eyeball_quest_active is false>>
+                        Fisherman: Ok then, I believe you...
+                    <<else>>
+                        <<wait 1>>
+                        Eyeball: You Will..
+                        Eyeball: Sacrificeeeee Himmmm...
+                        <<wait 1>>
+                    <<endif>>
+                    Fisherman: Now, why am I here...
+                    Fisherman: I-I, need fuel.
+                    Fisherman: Do you have any.
+                    -> Yes, I'll grab it for you now.
+                        Fisherman: Th-Thanks...
+                        <<if $eyeball_quest_active is false>>
+                            <<set $fisherman_quest3_active to true>>
+                        <<else>>
+                            <<set $fisherman_quest3_active to true>>
+                            <<wait  2>>
+                            Eyeball: Claim The Dagger...
+                            Eyeball: Impaled Into Me...
+                            Eyeball: And Sacrifice Him...
+                        <<endif>>
+                    -> No, I don't have any.
+                        Fisherman: Oh...
+                        Fisherman: I'm not sure if I can make it back.
+                        <<set $corruption_level to $corruption_level + 1>>
+                        <<set $fisherman_quest3_denied to true>>
+                        <<set $fisherman_quest3_end to true>>
+                -> Yes
+                    Fisherman: YOU'RE DEAD!
+                    <<set $murdered_ending to true>>
+                    <<set $fisherman_quest3_end to true>>
+        <<else>>
+            Fisherman: Just waiting...   
+        <<endif>>
+    <<else>>
+        Fisherman: Th-Thanks...
+        Fisherman: I'll go now. Bye.
+        <<set $fisherman_quest3_end to true>>
+    <<endif>>
+<<endif>>   
+===

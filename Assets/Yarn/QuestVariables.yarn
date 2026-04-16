@@ -19,8 +19,14 @@
 <<declare $fisherman_quest2_completed = false as bool>>
 <<declare $fisherman_quest2_end = false as bool>>
 
+//paranoid fisherman quest 3
+<<declare $fisherman_quest3_active = false as bool>>
+<<declare $fisherman_quest3_denied = false as bool>>
+<<declare $fisherman_quest3_completed = false as bool>>
+<<declare $fisherman_quest3_end = false as bool>>
 
-//fisherman quest 3
+
+//corrupted fisherman quest
 <<declare $corrupted_fisherman_quest1_active = false as bool>>
 <<declare $corrupted_fisherman_quest1_denied = false as bool>>
 <<declare $corrupted_fisherman_quest1_completed = false as bool>>
@@ -37,4 +43,7 @@
 <<declare $eyeball_quest_denied = false as bool>>
 <<declare $eyeball_quest_completed = false as bool>>
 <<declare $eyeball_quest_end = false as bool>>
+
+//endings
+<<declare $murdered_ending = false as bool>>
 ===

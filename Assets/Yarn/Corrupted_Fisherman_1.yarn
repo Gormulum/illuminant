@@ -18,6 +18,7 @@
     <<else>>
         Fisherman: Food......
         Fisherman: Thank...
+        <<set $corruption_level to $corruption_level + 1>>
         <<set $corrupted_fisherman_quest1_end to true>>
     <<endif>>
 <<endif>>   

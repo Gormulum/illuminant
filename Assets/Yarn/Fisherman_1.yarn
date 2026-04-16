@@ -2,27 +2,32 @@
 position: 12,-10
 ---
 
-<<if $fisherman_quest1_active is false and $fisherman_quest1_end is false>>
-    Fisherman: Hello there keeper, isn't that a nice day. Could you give me a hand?
-    Fisherman: I've ran out of fishing line, would you happen to have any.
--> Yeah I think I have some at my home, I'll be two minutes.
-    <<set $fisherman_quest1_active to true>>
--> No.
-    <<set $fisherman_quest1_active to true>>
-    <<set $fisherman_quest1_denied to true>>
-    
-<<elseif $fisherman_quest1_denied is false and $fisherman_quest1_completed is false and $fisherman_quest1_end is false>>
-    Fisherman: Just waiting on the fishing line.
-<<elseif $fisherman_quest1_denied is false and $fisherman_quest1_completed is true and $fisherman_quest1_end is false>>
-    Fisherman: Oh! Happy me! That's perfect, thank you very much.
-    <<set $fisherman_quest1_end to true>>
-<<elseif $fisherman_quest1_denied is true and $fisherman_quest1_end is false>>
-    Fisherman: Oh...
-    Fisherman: That's ok then. I'll just go on my merry way then.
-    <<set $corruption_level to $corruption_level + 1>>
-    <<set $fisherman_quest1_end to true>>
-<<endif>>
+<<if $fisherman_quest1_end is false>>
+    <<if $fisherman_quest1_completed is false>>
+        <<if $fisherman_quest1_active is false>>
+            Fisherman: Hello there keeper, isn't that a nice day. Could you give me a hand?
+            Fisherman: I've ran out of fishing line, would you happen to have any.
+        -> Yeah I think I have some at my home, I'll be two minutes.
+            Fisherman: Thanks! I really appreciate it.
+            <<set $fisherman_quest1_active to true>>
+        -> No.
+            Fisherman: Oh...
+            Fisherman: That's ok then. I'll just go on my merry way then.
+            <<set $corruption_level to $corruption_level + 1>>
+            <<set $fisherman_quest1_denied to true>>
+            <<set $fisherman_quest1_end to true>>
+        <<else>>
+            Fisherman: Just waiting on the fishing line...
+        <<endif>>
+    <<else>>
+        Fisherman: Oh! Happy me! That's perfect, thank you very much.
+        <<set $fisherman_quest1_end to true>>
+    <<endif>>
+<<endif>>   
 ===
+
+
+
 
 
 

@@ -19,6 +19,7 @@
         <<endif>>
     <<else>>
         You feel an evil presence loom over you...
+        <<set $corruption_level to $corruption_level + 1>>
         <<set $shipwreck_quest_end to true>>
     <<endif>>
 <<endif>>   

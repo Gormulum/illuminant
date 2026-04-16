@@ -38,7 +38,7 @@ MonoBehaviour:
   m_ProbeVolumeBlendingMemoryBudget: 256
   m_SupportProbeVolumeGPUStreaming: 1
   m_SupportProbeVolumeDiskStreaming: 1
-  m_SupportProbeVolumeScenarios: 0
+  m_SupportProbeVolumeScenarios: 1
   m_SupportProbeVolumeScenarioBlending: 1
   m_ProbeVolumeSHBands: 1
   m_MainLightRenderingMode: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_AdditionalLightsShadowResolutionTierMedium: 512
   m_AdditionalLightsShadowResolutionTierHigh: 1024
   m_ReflectionProbeBlending: 1
-  m_ReflectionProbeBoxProjection: 1
+  m_ReflectionProbeBoxProjection: 0
   m_ReflectionProbeAtlas: 1
   m_ShadowDistance: 50
   m_ShadowCascadeCount: 4

@@ -30,7 +30,7 @@ public class QuestGiver : MonoBehaviour
     //[YarnCommand("QuestComplete")]
     public void QuestComplete()
     {
-        //Debug.Log("Quest completed! You can add your quest completion logic here.");
+        Debug.Log("Quest completed! You can add your quest completion logic here.");
         // You can add additional logic here, such as giving rewards, updating quest status, etc.
     }
 }

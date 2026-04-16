@@ -12,6 +12,7 @@ position: 12,-10
             <<set $fisherman_quest2_active to true>>
         -> No.
             Fisherman: Curses!, I'm not sure I'll make it out in these waters!
+            <<set $corruption_level to $corruption_level + 1>>
             <<set $fisherman_quest2_denied to true>>
             <<set $fisherman_quest2_end to true>>
         <<else>>
