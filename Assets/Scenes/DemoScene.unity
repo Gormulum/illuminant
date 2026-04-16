@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 1, g: 1, b: 1, a: 1}
   m_FogMode: 1
-  m_FogDensity: 0.01
+  m_FogDensity: 0.003
   m_LinearFogStart: 20
   m_LinearFogEnd: 100
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1.2
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.21383637, g: 0.21383637, b: 0.21383637, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 91b7bed144797cf449de44199e892280, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 948826c3653b8ad4aa7d4077919e65aa, type: 2}
   m_HaloStrength: 0.386
   m_FlareStrength: 0.456
   m_FlareFadeSpeed: 3
@@ -715,6 +715,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122797389}
   m_Mesh: {fileID: 8166509906539072942, guid: c1aaf17b791576d4a9951b447f6d2435, type: 3}
+--- !u!1001 &151046054
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2919899476592718051, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: nodeName
+      value: Shipwreck
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919899476592718051, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: dialogueRunner
+      value: 
+      objectReference: {fileID: 1057236325}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850279385743159095, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_Name
+      value: FIsherman (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850279385743159095, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
 --- !u!1001 &196750098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3046,7 +3115,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2919899476592718051, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
       propertyPath: nodeName
-      value: Fisherman_3
+      value: Corrupted_Fisherman_1
       objectReference: {fileID: 0}
     - target: {fileID: 2919899476592718051, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
       propertyPath: dialogueRunner
@@ -3098,7 +3167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6850279385743159095, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7440,6 +7509,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424a39e85ebd922408b28854f735ffce, type: 3}
+--- !u!1001 &1473595200
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2919899476592718051, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: nodeName
+      value: Eyeball
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919899476592718051, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: dialogueRunner
+      value: 
+      objectReference: {fileID: 1057236325}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.927
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999270849323602910, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850279385743159095, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_Name
+      value: FIsherman (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850279385743159095, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e33d3d96b78fb743b441f0dca888d59, type: 3}
 --- !u!1 &1479315475
 GameObject:
   m_ObjectHideFlags: 0
@@ -8058,7 +8196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestCompetionTrigger
   dialogueRunner: {fileID: 1057236325}
-  variableName: $quest2_completed
+  variableName: $shipwreck_quest_completed
 --- !u!1001 &1592933488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11529,6 +11667,8 @@ SceneRoots:
   - {fileID: 2309884063401109420}
   - {fileID: 1372732451}
   - {fileID: 689529445}
+  - {fileID: 151046054}
+  - {fileID: 1473595200}
   - {fileID: 2528402167387628395}
   - {fileID: 1583007277}
   - {fileID: 3024359144148747833}
