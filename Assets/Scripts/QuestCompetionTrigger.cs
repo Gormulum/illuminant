@@ -5,12 +5,19 @@ public class QuestCompetionTrigger : MonoBehaviour
 {
     [SerializeField] private DialogueRunner dialogueRunner;
     [SerializeField] private string variableName;
+    [SerializeField] private string nodeName;
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             CompleteQuest();
+        }
+
+        if (nodeName != null)
+        {
+            dialogueRunner.StartDialogue(nodeName);
         }
     }
 

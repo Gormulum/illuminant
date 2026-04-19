@@ -24,7 +24,7 @@ public class StoryProgress : MonoBehaviour
     void Start()
     {
 
-
+        Story();
 
         
     }
@@ -39,7 +39,14 @@ public class StoryProgress : MonoBehaviour
     {
         if (context.performed)
         {
-            if (day == 0 && corruption == 0)
+            Story();
+        }
+        
+    }
+
+    public void Story()
+    {
+        if (day == 0 && corruption == 0)
             {
                 Fisherman1.SetActive(true);
             }
@@ -78,7 +85,5 @@ public class StoryProgress : MonoBehaviour
             {
                 ParanoidFisherman.SetActive(true);
             }
-        }
-        
     }
 }

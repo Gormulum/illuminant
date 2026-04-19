@@ -23,7 +23,7 @@ public class DayNightCycke : MonoBehaviour
 
     bool goneToBed;
     UnityEngine.Rendering.ProbeReferenceVolume probeRefVolume;
-
+    public StoryProgress storyProgress;
 
     Quaternion startAngle;
     Quaternion endAngle;
@@ -67,6 +67,7 @@ public class DayNightCycke : MonoBehaviour
             {
                 Debug.Log("Slept");
                 ResetSky();
+                storyProgress.Story();
                 goneToBed = false;
             }
 
