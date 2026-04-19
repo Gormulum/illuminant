@@ -21,6 +21,7 @@ public class QuestCompetionTrigger : MonoBehaviour
         {
             dialogueRunner.VariableStorage.SetValue(variableName, true);
             Debug.Log("Completed Quest");
+            Destroy(gameObject);
         } 
     }
 }

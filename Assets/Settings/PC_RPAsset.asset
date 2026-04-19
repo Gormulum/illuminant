@@ -35,9 +35,9 @@ MonoBehaviour:
   m_ShEvalMode: 0
   m_LightProbeSystem: 1
   m_ProbeVolumeMemoryBudget: 1024
-  m_ProbeVolumeBlendingMemoryBudget: 256
+  m_ProbeVolumeBlendingMemoryBudget: 512
   m_SupportProbeVolumeGPUStreaming: 1
-  m_SupportProbeVolumeDiskStreaming: 1
+  m_SupportProbeVolumeDiskStreaming: 0
   m_SupportProbeVolumeScenarios: 1
   m_SupportProbeVolumeScenarioBlending: 1
   m_ProbeVolumeSHBands: 1
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_AdditionalLightsRenderingMode: 1
   m_AdditionalLightsPerObjectLimit: 4
   m_AdditionalLightShadowsSupported: 1
-  m_AdditionalLightsShadowmapResolution: 4096
+  m_AdditionalLightsShadowmapResolution: 8192
   m_AdditionalLightsShadowResolutionTierLow: 256
   m_AdditionalLightsShadowResolutionTierMedium: 512
   m_AdditionalLightsShadowResolutionTierHigh: 1024
