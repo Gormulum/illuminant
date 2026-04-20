@@ -89,7 +89,7 @@ Material:
     - _BumpScale: 1
     - _CUBEMAPP: 1
     - _CubemapPosition: 0
-    - _CubemapTransition: 0.2996233
+    - _CubemapTransition: 0
     - _Cubemapp: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -99,11 +99,11 @@ Material:
     - _Exposure: 1.2
     - _Float0: -0.21
     - _FogFill: 0
-    - _FogHeight: 1
-    - _FogIntensity: 0.107
+    - _FogHeight: 0.498
+    - _FogIntensity: 1
     - _FogMessage: 0
     - _FogPosition: 0
-    - _FogSmoothness: 0.01
+    - _FogSmoothness: 0.153
     - _Fogg: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5

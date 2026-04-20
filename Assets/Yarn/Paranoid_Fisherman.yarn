@@ -36,12 +36,20 @@
                             <<set $fisherman_quest3_active to true>>
                             <<wait  2>>
                             Eyeball: Claim The Dagger...
-                            Eyeball: Impaled Into Me...
+                            Eyeball: Impaled On The Altar...
                             Eyeball: And Sacrifice Him...
                         <<endif>>
                     -> No, I don't have any.
                         Fisherman: Oh...
                         Fisherman: I'm not sure if I can make it back.
+                        <<if $eyeball_quest_active is false>>
+                            
+                        <<else>>
+                            <<wait  2>>
+                            Eyeball: Claim The Dagger...
+                            Eyeball: Impaled On The Altar...
+                            Eyeball: And Sacrifice Him...
+                        <<endif>>
                         <<set $corruption_level to $corruption_level + 1>>
                         <<set $fisherman_quest3_denied to true>>
                         <<set $fisherman_quest3_end to true>>
@@ -50,11 +58,18 @@
                     <<set $murdered_ending to true>>
                     <<set $fisherman_quest3_end to true>>
         <<else>>
-            Fisherman: Just waiting...   
+            <<if $eyeball_quest_completed is false>>
+                Fisherman: Just waiting...   
+            <<else>>
+                Fisherman: What are you doing!?
+                Fisherman: AAAAAAAAHHHHHHHHHHHHH...
+                <<set $corrupted_ending to true>>
+            <<endif>>
         <<endif>>
     <<else>>
         Fisherman: Th-Thanks...
         Fisherman: I'll go now. Bye.
+        <<set $good_ending to true>>
         <<set $fisherman_quest3_end to true>>
     <<endif>>
 <<endif>>   

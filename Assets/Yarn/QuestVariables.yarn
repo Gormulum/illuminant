@@ -46,4 +46,6 @@
 
 //endings
 <<declare $murdered_ending = false as bool>>
+<<declare $good_ending = false as bool>>
+<<declare $corrupted_ending = false as bool>>
 ===

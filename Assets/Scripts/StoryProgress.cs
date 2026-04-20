@@ -47,43 +47,48 @@ public class StoryProgress : MonoBehaviour
     public void Story()
     {
         if (day == 0 && corruption == 0)
-            {
+        {
                 Fisherman1.SetActive(true);
             }
 
-            if (day == 1)
+        if (day == 1)
+        {
+            Fisherman1.SetActive(false);
+            if (corruption == 0)
             {
-                if (corruption == 0)
-                {
-                    Fisherman2.SetActive(true);
-                }
-                else if (corruption == 1)
-                {
-                    Shipwreck.SetActive(true);
-                }
+                Fisherman2.SetActive(true);
             }
-
-            if (day == 2)
+            else if (corruption == 1)
             {
-                CorruptedFisherman.SetActive(true);
+                Shipwreck.SetActive(true);
             }
+        }
 
-            if (day == 3)
-            {
-                if (corruption == 0)
-                {
+        if (day == 2)
+        {      
+            Fisherman2.SetActive(false);
+            CorruptedFisherman.SetActive(true);
+        }
 
-                }
-                else
-                {
-                    Eyeball.SetActive(true);
-                }
-            } 
-            
-            
-            if (day == 4)
+        if (day == 3)
+        {
+            if (corruption == 0)
             {
+                CorruptedFisherman.SetActive(false);
                 ParanoidFisherman.SetActive(true);
             }
+            else
+            {
+                CorruptedFisherman.SetActive(false);
+                Eyeball.SetActive(true);
+            }
+        } 
+        
+        
+        if (day == 4)
+        {
+            Eyeball.SetActive(false);
+            ParanoidFisherman.SetActive(true);
+        }
     }
 }
