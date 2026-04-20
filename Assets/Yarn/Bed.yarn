@@ -2,7 +2,10 @@
 ---
 Go to bed?
 -> Yes
+    <<fade_in_camera ScreenFade>>
+    <<wait 1>>
     <<set $day to $day + 1>>
     <<set $gone_to_bed to true>>
+    <<fade_out_camera ScreenFade>>
 -> No
 ===

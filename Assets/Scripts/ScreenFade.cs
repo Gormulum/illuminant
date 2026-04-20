@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Yarn.Unity;
 public class ScreenFade : MonoBehaviour
 {
     [SerializeField] CanvasGroup canvasGroup;
@@ -18,11 +19,13 @@ public class ScreenFade : MonoBehaviour
         }
     }
 
+    [YarnCommand("fade_in_camera")]
     public void FadeIn()
     {
         StartCoroutine(CanvasFade(canvasGroup, canvasGroup.alpha, 1));
     }
 
+    [YarnCommand("fade_out_camera")]
     public void FadeOut()
     {
         StartCoroutine(CanvasFade(canvasGroup, canvasGroup.alpha, 0));
