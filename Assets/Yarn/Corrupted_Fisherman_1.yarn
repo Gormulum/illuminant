@@ -3,21 +3,20 @@
 <<if $corrupted_fisherman_quest1_end is false>>
     <<if $corrupted_fisherman_quest1_completed is false>>
         <<if $corrupted_fisherman_quest1_active is false>>
-            Fisherman: Bleghhhhhhh...
+            Fisherman: BLEGHHHHH...
             Fisherman: Give meeee Foodddd...
-        -> Yes, I'll grab some now.
-            Fisherman: Hungry.
-            <<set $corrupted_fisherman_quest1_active to true>>
-        -> No.
+        -> What? No.
             Fisherman: GRAHH!
             <<set $corrupted_fisherman_quest1_denied to true>>
             <<set $corrupted_fisherman_quest1_end to true>>
+        -> Yes, I'll grab some now.
+            Fisherman: Hungry.
+            <<set $corrupted_fisherman_quest1_active to true>>
         <<else>>
             Fisherman: Hungryyyyyy...   
         <<endif>>
     <<else>>
         Fisherman: Food......
-        Fisherman: Thank...
         <<set $corruption_level to $corruption_level + 1>>
         <<set $corrupted_fisherman_quest1_end to true>>
     <<endif>>

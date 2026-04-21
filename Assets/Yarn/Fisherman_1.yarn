@@ -7,21 +7,33 @@ position: 12,-10
         <<if $fisherman_quest1_active is false>>
             Fisherman: Hello there keeper, isn't that a nice day. Could you give me a hand?
             Fisherman: I've ran out of fishing line, would you happen to have any.
-        -> Yeah I think I have some at my home, I'll be two minutes.
+        -> Yeah I think I have some outside my home, I'll be two minutes.
             Fisherman: Thanks! I really appreciate it.
             <<set $fisherman_quest1_active to true>>
         -> No.
             Fisherman: Oh...
-            Fisherman: That's ok then. I'll just go on my merry way then.
+            Fisherman: That's... ok then...
+            Fisherman: I'll just go on my merry way then.
+            Fisherman: See you later.
+            
             <<set $corruption_level to $corruption_level + 1>>
             <<set $fisherman_quest1_denied to true>>
             <<set $fisherman_quest1_end to true>>
+            <<wait  1>>
+            Weird...
         <<else>>
             Fisherman: Just waiting on the fishing line...
         <<endif>>
     <<else>>
         Fisherman: Oh! Happy me! That's perfect, thank you very much.
-        <<set $fisherman_quest1_end to true>>
+        Fisherman: This will keep me going for the next while.
+        Fisherman: Keep safe out here keeper, its not all that safe.
+        -> What do you mean not safe?
+            Fisherman: See Ya!
+            <<set $fisherman_quest1_end to true>>
+            <<wait  1>>
+            Weird...
+        
     <<endif>>
 <<endif>>   
 ===

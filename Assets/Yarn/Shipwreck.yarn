@@ -3,19 +3,23 @@
 <<if $shipwreck_quest_end is false>>
     <<if $shipwreck_quest_completed is false>>
         <<if $shipwreck_quest_active is false>>
+            Is this that fisherman's boat!?
+            God what happened to him?
+            <<wait  0.5>>
+            Is that a note?
             Note: Stone will be upturned
             Note: Nature will be unborn
             Note: Found the sigil at the peak
             Note: And plead
-        -> Follow note, and go to the top of the mountain.
-            Note: ...
+        -> Check the top of the mountain.
+            I'm curious.
             <<set $shipwreck_quest_active to true>>
         -> No, this is weird.
             You drop the note...
             <<set $shipwreck_quest_denied to true>>
             <<set $shipwreck_quest_end to true>>
         <<else>>
-            Note: ...   
+            ...   
         <<endif>>
     <<else>>
         You feel an evil presence loom over you...

@@ -30,31 +30,16 @@
                     Fisherman: Do you have any.
                     -> Yes, I'll grab it for you now.
                         Fisherman: Th-Thanks...
-                        <<if $eyeball_quest_active is false>>
-                            <<set $fisherman_quest3_active to true>>
-                        <<else>>
-                            <<set $fisherman_quest3_active to true>>
-                            <<wait  2>>
-                            Eyeball: Claim The Dagger...
-                            Eyeball: Impaled On The Altar...
-                            Eyeball: And Sacrifice Him...
-                        <<endif>>
-                    -> No, I don't have any.
-                        Fisherman: Oh...
-                        Fisherman: I'm not sure if I can make it back.
-                        <<if $eyeball_quest_active is false>>
-                            
-                        <<else>>
-                            <<wait  2>>
-                            Eyeball: Claim The Dagger...
-                            Eyeball: Impaled On The Altar...
-                            Eyeball: And Sacrifice Him...
-                        <<endif>>
-                        <<set $corruption_level to $corruption_level + 1>>
-                        <<set $fisherman_quest3_denied to true>>
-                        <<set $fisherman_quest3_end to true>>
+                        <<set $fisherman_quest3_active to true>>
+                        <<wait  2>>
+                        Eyeball: Claim The Dagger...
+                        Eyeball: Impaled On The Altar...
+                        Eyeball: And Sacrifice Him...
                 -> Yes
                     Fisherman: YOU'RE DEAD!
+                    <<wait  0.5>>
+                    <<fade_in_camera ScreenFade>>
+                    <<wait  0.5>>
                     <<set $murdered_ending to true>>
                     <<set $fisherman_quest3_end to true>>
         <<else>>
@@ -63,14 +48,22 @@
             <<else>>
                 Fisherman: What are you doing!?
                 Fisherman: AAAAAAAAHHHHHHHHHHHHH...
+                <<wait  0.5>>
+                <<fade_in_camera ScreenFade>>
+                <<wait  0.5>>
                 <<set $corrupted_ending to true>>
             <<endif>>
         <<endif>>
     <<else>>
-        Fisherman: Th-Thanks...
-        Fisherman: I'll go now. Bye.
-        <<set $good_ending to true>>
-        <<set $fisherman_quest3_end to true>>
+        <<if $eyeball_quest_completed is false>>
+            Fisherman: Th-Thanks...
+            Fisherman: I'll go now. Bye.
+            <<wait  0.5>>
+            <<fade_in_camera ScreenFade>>
+            <<wait  0.5>>
+            <<set $good_ending to true>>
+            <<set $fisherman_quest3_end to true>>
+        <<endif>>
     <<endif>>
 <<endif>>   
 ===
