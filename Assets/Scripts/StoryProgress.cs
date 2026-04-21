@@ -81,6 +81,7 @@ public class StoryProgress : MonoBehaviour
         {
             if (corruption == 0 || corruption == 1)
             {
+                CorruptedFisherman.SetActive(false);
                 ParanoidFisherman.SetActive(true);
                 //max 2 min 0
             }
