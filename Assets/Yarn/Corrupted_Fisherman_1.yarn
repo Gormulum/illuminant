@@ -1,0 +1,24 @@
+﻿title: Corrupted_Fisherman_1
+---
+<<if $corrupted_fisherman_quest1_end is false>>
+    <<if $corrupted_fisherman_quest1_completed is false>>
+        <<if $corrupted_fisherman_quest1_active is false>>
+            Fisherman: BLEGHHHHH...
+            Fisherman: Give meeee Foodddd...
+        -> What? No.
+            Fisherman: GRAHH!
+            <<set $corrupted_fisherman_quest1_denied to true>>
+            <<set $corrupted_fisherman_quest1_end to true>>
+        -> Yes, I'll grab some now.
+            Fisherman: Hungry.
+            <<set $corrupted_fisherman_quest1_active to true>>
+        <<else>>
+            Fisherman: Hungryyyyyy...   
+        <<endif>>
+    <<else>>
+        Fisherman: Food......
+        <<set $corruption_level to $corruption_level + 1>>
+        <<set $corrupted_fisherman_quest1_end to true>>
+    <<endif>>
+<<endif>>   
+===

@@ -1,0 +1,10 @@
+﻿title: Altar
+---
+<<once>>
+<<wait  2>>
+Altar: ...
+<<wait  1>>
+You feel an evil presence loom over you...
+Altar: ...
+<<endonce>>
+===

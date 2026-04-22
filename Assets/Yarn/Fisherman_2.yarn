@@ -2,28 +2,42 @@
 position: 12,-10
  
 ---
-<<if $quest2_end is false>>
-    <<if $quest2_completed is false>>
-        <<if $quest2_active is false>>
+<<if $fisherman_quest2_end is false>>
+    <<if $fisherman_quest2_completed is false>>
+        <<if $fisherman_quest2_active is false>>
             Fisherman: Alright, how's it going boss, I'm in bit of a pickle here.
-            Fisherman: Would you have any oil on you? my engine is making a lot of ruckus.
-        -> Yes, I'll grab some now.
+            Fisherman: Would you have any oil on you? my engine has been struggling here.
+            Fisherman: Any kind will do.
+        -> Yeah there's a tank behind my house.
             Fisherman: Thanks boss.
-            <<set $quest2_active to true>>
+            <<set $fisherman_quest2_active to true>>
         -> No.
-            Fisherman: Curses!, I'm not sure I'll make it out in these waters!
-            <<set $quest2_denied to true>>
-            <<set $quest2_end to true>>
+            Fisherman: CURSES! 
+            Fisherman: I'm not sure I'll make it out in these waters!
+            <<set $fisherman_quest2_end to true>>
+            <<set $corruption_level to $corruption_level + 1>>
+            <<set $fisherman_quest2_denied to true>>
+            
         <<else>>
             Fisherman: Just waiting...   
         <<endif>>
     <<else>>
         Fisherman: Gee, thanks lad. That'll keep her going.
-        Fisherman: Did ye see that disease 'bout no?  
-        Fisherman: Some of my men are going nuts!
-        Fisherman: I have to get to the bottom of this.
-        Fisherman: Thanks for the oil now. Cheerio...
-        <<set $quest2_end to true>>
+        Fisherman: You're a life saver.
+        <<wait 1>>
+        Fisherman: Have you heard of this new sickness floating around? 
+        Fisherman: It's scaring me...
+        Fisherman: Half of my town caught it, and everyone is going mad.
+        Fisherman: Anybody who caught it, still has it. There's been no cure since.
+        Fisherman: It's practically a plague out here...
+        <<wait  1>>
+        Fisherman: Lucky you being out here, away from everyone, Ha!
+        Fisherman: Well, I better be on my way.
+        Fisherman: Thanks for the oil.
+        <<wait  1>>
+        I better not catch that disease.
+        That last fisherman probably had it.
+        <<set $fisherman_quest2_end to true>>
     <<endif>>
 <<endif>>   
 ===

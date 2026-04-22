@@ -7,20 +7,45 @@
 <<declare $day = 0 >>
 <<declare $gone_to_bed = false as bool>>
 
-//quest 1
-<<declare $quest1_active = false as bool>>
-<<declare $quest1_denied = false as bool>>
-<<declare $quest1_completed = false as bool>>
-<<declare $quest1_end = false as bool>>
+//fisherman quest 1
+<<declare $fisherman_quest1_active = false as bool>>
+<<declare $fisherman_quest1_denied = false as bool>>
+<<declare $fisherman_quest1_completed = false as bool>>
+<<declare $fisherman_quest1_end = false as bool>>
 
-//quest 2
-<<declare $quest2_active = false as bool>>
-<<declare $quest2_denied = false as bool>>
-<<declare $quest2_completed = false as bool>>
-<<declare $quest2_end = false as bool>>
+//fisherman quest 2
+<<declare $fisherman_quest2_active = false as bool>>
+<<declare $fisherman_quest2_denied = false as bool>>
+<<declare $fisherman_quest2_completed = false as bool>>
+<<declare $fisherman_quest2_end = false as bool>>
+
+//paranoid fisherman quest 3
+<<declare $fisherman_quest3_active = false as bool>>
+<<declare $fisherman_quest3_denied = false as bool>>
+<<declare $fisherman_quest3_completed = false as bool>>
+<<declare $fisherman_quest3_end = false as bool>>
 
 
-//quest 3
-<<declare $quest3_active = false as bool>>
-<<declare $quest3_completed = false as bool>>
+//corrupted fisherman quest
+<<declare $corrupted_fisherman_quest1_active = false as bool>>
+<<declare $corrupted_fisherman_quest1_denied = false as bool>>
+<<declare $corrupted_fisherman_quest1_completed = false as bool>>
+<<declare $corrupted_fisherman_quest1_end = false as bool>>
+
+//shipwreck quest
+<<declare $shipwreck_quest_active = false as bool>>
+<<declare $shipwreck_quest_denied = false as bool>>
+<<declare $shipwreck_quest_completed = false as bool>>
+<<declare $shipwreck_quest_end = false as bool>>
+
+//eyeball quest
+<<declare $eyeball_quest_active = false as bool>>
+<<declare $eyeball_quest_denied = false as bool>>
+<<declare $eyeball_quest_completed = false as bool>>
+<<declare $eyeball_quest_end = false as bool>>
+
+//endings
+<<declare $murdered_ending = false as bool>>
+<<declare $good_ending = false as bool>>
+<<declare $corrupted_ending = false as bool>>
 ===

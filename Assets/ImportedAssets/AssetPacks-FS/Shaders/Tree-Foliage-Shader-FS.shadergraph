@@ -351,7 +351,7 @@
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "7ac9eca0f5eb43ea8bc2b96851b5654c"
+                    "m_Id": "f508c2f8ec9d4b9586d1b53cb1245c19"
                 },
                 "m_SlotId": 0
             }
@@ -688,20 +688,6 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "274bf917eb144c3fbdf99bd736b70223"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "827a7853ebbe4e21a1d57b34311b9444"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "f508c2f8ec9d4b9586d1b53cb1245c19"
                 },
                 "m_SlotId": 0
             }
@@ -3979,8 +3965,8 @@
     "m_ObjectId": "72c50fbf95004e84aaf7e58cd8aba198",
     "m_Title": "UV Offset",
     "m_Position": {
-        "x": -1800.0003662109375,
-        "y": -506.00006103515627
+        "x": -1800.000244140625,
+        "y": -506.0000305175781
     }
 }
 
@@ -4377,8 +4363,8 @@
     "m_ObjectId": "8a670ba08a13435496334da8e33dac94",
     "m_Title": "Vertex Animation",
     "m_Position": {
-        "x": -1010.6668090820313,
-        "y": -552.0000610351563
+        "x": -1010.6666870117188,
+        "y": -552.0
     }
 }
 
