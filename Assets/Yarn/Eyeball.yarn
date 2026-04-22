@@ -4,16 +4,13 @@
 <<if $eyeball_quest_end is false>>
     <<if $eyeball_quest_completed is false>>
         <<if $eyeball_quest_active is false>>
-            Eyeball: <color=red>Sacrifice... !</color>
-        -> ...
-            Eyeball: <color=red>Sacrifice... !</color>
-            Eyeball: <color=red>Sacrificeeeeee... !</color>
+            Eyeball: ...
+            -> God...
+                Eyeball: Sacrifice...
+                Eyeball: Sacrificeeeeee...
             <<set $corruption_level to $corruption_level + 1>>
             <<set $eyeball_quest_active to true>>
         <<else>>
-            <<once>>
-            You feel an evil presence loom over you...
-            <<endonce>>
         <<endif>>
     <<else>>
         

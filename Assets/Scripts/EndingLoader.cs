@@ -19,7 +19,7 @@ public class EndingLoader : MonoBehaviour
     void Update()
     {
         variableStorage.TryGetValue("$murdered_ending", out murdered);
-        variableStorage.TryGetValue("$corruption_ending", out corrupted);
+        variableStorage.TryGetValue("$corrupted_ending", out corrupted);
         variableStorage.TryGetValue("$good_ending", out good);
 
         if (murdered == true)
