@@ -17,7 +17,7 @@ public class Door : MonoBehaviour
     {
         if (other.CompareTag("Player") && !hasTriggered)
         {
-            Debug.Log("Triggerd");
+            
             hasTriggered = true; 
         }
     }
