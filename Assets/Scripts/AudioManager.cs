@@ -1,4 +1,5 @@
 using UnityEngine;
+using Yarn.Unity;
 
 public class AudioManager : MonoBehaviour
 {
@@ -30,12 +31,19 @@ public class AudioManager : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    [YarnCommand("play_oneshot")]
     public void PlayOneShot(string name)
     {
         switch(name)
         {
-            case ("Stinger"):
+            case ("stinger"):
+                soundEvent.clip = stinger;
                 soundEvent.PlayOneShot(stinger);
+                break;
+            case ("boatCrash"):
+                soundEvent.clip = boatCrash;
+                soundEvent.PlayOneShot(boatCrash);
             break;
         }
     }

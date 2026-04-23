@@ -1,19 +1,20 @@
-﻿title: Eyeball
+title: Eyeball
 ---
 <
 <<if $eyeball_quest_end is false>>
     <<if $eyeball_quest_completed is false>>
         <<if $eyeball_quest_active is false>>
-            Eyeball: ...
-            -> God...
+            <<play_oneshot AudioManager stinger>>
+            Eyeball: Sacrifice...
+            -> What...
                 Eyeball: Sacrifice...
                 Eyeball: Sacrificeeeeee...
             <<set $corruption_level to $corruption_level + 1>>
             <<set $eyeball_quest_active to true>>
         <<else>>
+            
         <<endif>>
     <<else>>
-        
         <<set $eyeball_quest_end to true>>
     <<endif>>
 <<endif>>   

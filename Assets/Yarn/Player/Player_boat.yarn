@@ -1,0 +1,6 @@
+﻿title: Player_boat
+---
+<<play_oneshot AudioManager boatCrash>>
+<<wait 1>>
+What was that!
+===
